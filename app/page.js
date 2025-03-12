@@ -1,28 +1,43 @@
-// app/page.js
 export default function Home() {
-  return (
-    <div className="w-[1769px] h-[1151px] relative bg-gradient-to-b from-[#db4439] to-[#75241e] overflow-hidden">
-      <div className="w-[150px] h-[52px] left-[1567px] top-[58px] absolute">
-        <div className="w-[150px] h-[52px] left-0 top-0 absolute bg-[#eaecd7] rounded-[49px]" />
-        <div className="left-[50px] top-0 absolute justify-start text-[#db4439] text-base font-black font-['Inknut_Antiqua']">Click</div>
-      </div>
-      <div className="origin-top-left rotate-[-8.64deg] w-[543px] h-[590.40px] left-[1068.69px] top-[226px] absolute">
-        <div className="w-[543px] h-[590.40px] left-[88.69px] top-0 absolute bg-[#d9d9d9]" />
-        <img className="w-[630.99px] h-[1054.71px] left-[81.51px] top-[-57.62px] absolute" src="https://placehold.co/631x1055" />
-      </div>
-      <div className="w-[680px] left-[143px] top-[313px] absolute justify-start text-[#eaecd7] text-[110px] font-black font-['Inknut_Antiqua'] leading-[134.20px]">This is the Topic This is the Topic</div>
-      <div className="w-[680px] left-[148px] top-[740px] absolute justify-start text-[#eaecd7] text-[40px] font-semibold font-['Inknut_Antiqua'] leading-[48.80px]">This is the Topic </div>
-      <div className="left-[270px] top-[46px] absolute justify-start text-[#eaecd7] text-2xl font-bold font-['Inknut_Antiqua']">Me</div>
-      <div className="left-[64px] top-[46px] absolute justify-start text-[#eaecd7] text-2xl font-bold font-['Inknut_Antiqua']">Front Page</div>
-      <div className="left-[891px] top-[46px] absolute justify-start text-[#eaecd7] text-2xl font-bold font-['Inknut_Antiqua']">ME</div>
-      <div className="left-[965px] top-[46px] absolute justify-start text-[#eaecd7] text-2xl font-bold font-['Inknut_Antiqua']">ME</div>
-      <div className="left-[716px] top-[46px] absolute justify-start text-[#eaecd7] text-2xl font-bold font-['Inknut_Antiqua']">Front Page</div>
-      <div className="w-[1804px] h-[102px] left-[-35px] top-[1049px] absolute bg-white" />
-      <div className="left-[124px] top-[1063px] absolute justify-start text-[#db4439] text-2xl font-black font-['Inknut_Antiqua'] leading-[29.28px]">This is the Topic</div>
-      <div className="left-[459px] top-[1063px] absolute justify-start text-[#db4439] text-2xl font-black font-['Inknut_Antiqua'] leading-[29.28px]">This is the Topic</div>
-      <div className="left-[794px] top-[1063px] absolute justify-start text-[#db4439] text-2xl font-black font-['Inknut_Antiqua'] leading-[29.28px]">This is the Topic</div>
-      <div className="left-[1464px] top-[1063px] absolute justify-start text-[#db4439] text-2xl font-black font-['Inknut_Antiqua'] leading-[29.28px]">This is the Topic</div>
-      <div className="left-[1129px] top-[1063px] absolute justify-start text-[#db4439] text-2xl font-black font-['Inknut_Antiqua'] leading-[29.28px]">This is the Topic</div>
-    </div>
-  );
+    return (
+        <div className="w-full min-h-screen bg-gradient-to-b from-[#db4439] to-[#75241e] flex flex-col items-center">
+            {/* Navigation Bar */}
+            <nav className="w-full max-w-[1400px] flex justify-between items-center py-6 px-8 text-white text-xl font-bold">
+                <div className="flex gap-8">
+                    <a href="#" className="hover:underline">Home</a>
+                    <a href="#" className="hover:underline">Menu</a>
+                    <a href="#" className="hover:underline">Login</a>
+                </div>
+                <button className="bg-[#eaecd7] text-[#db4439] font-black py-2 px-6 rounded-full shadow-md">
+                    Click
+                </button>
+            </nav>
+
+            {/* Main Content */}
+            <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1400px] mt-20 px-8">
+                {/* Text Section */}
+                <div className="text-white lg:w-1/2 text-center lg:text-left">
+                    <h1 className="text-6xl font-black font-['Jersey_25'] leading-tight">BlaBla Coffe!</h1>
+                    <p className="text-2xl mt-4 font-semibold">Your No.1 Choice</p>
+                </div>
+
+                {/* Image Section */}
+                <div className="relative w-[350px] h-[400px] transform -rotate-9 lg:w-[400px] lg:h-[450px]">
+                    <div className="absolute inset-0 bg-gray-300 rounded-lg shadow-lg" />
+                    <img
+                        src="https://coffe_image.com"
+                        alt="Coffee shop"
+                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                    />
+                </div>
+            </div>
+
+            {/* Footer */}
+            <footer className="w-full bg-white py-6 mt-20 text-center text-[#db4439] font-bold flex flex-wrap justify-around text-lg px-8">
+                <a href="#" className="hover:underline">Contact Information</a>
+                <a href="#" className="hover:underline">Company Policy</a>
+                <a href="#" className="hover:underline">Be our partner today</a>
+            </footer>
+        </div>
+    );
 }
